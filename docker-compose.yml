@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  stklos:
+    container_name: 'stklos'
+    image: stklos/stklos:latest
+    volumes:
+      - ./code:/app/code
+    working_dir: /app/code
+    stdin_open: true  # Keep STDIN open
+    tty: true        # Allocate a pseudo-TTY
